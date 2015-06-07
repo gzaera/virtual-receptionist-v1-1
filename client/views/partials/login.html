@@ -1,0 +1,50 @@
+ 
+<div ng-controller="LoginCtrl">
+  <!--
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <ul class="nav nav-tabs">
+            <li><a href="/login">Log in</a></li>
+            <li><a href="" ng-click="logout()" ng-show="!!localUser">Log out</a></li>
+            <div id="userInfo" class="pull-right" ng-show="!!localUser" >Welcome&nbsp;<strong>{{localUser.displayName}}&nbsp;</strong></div>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div data-ui-view class="container"></div>
+    <div id="alertBox" data-ng-show="error" class="alert alert-danger">
+      <button type="button" data-ng-click="error = null;" class="close">&times;</button><strong>Oh no!&nbsp;</strong><span data-ng-bind="error"></span>
+    </div>
+
+-->
+<h1 ng-show="!localUser"> Welcome to the Virtual Receptionist</h1>
+<p ng-show="!localUser">  Please enter the Circuit credentials for the corresponding virtual receptionist: </p>
+<br>
+<section class="error" ng-show="!!error">{{error}}</section>
+
+<form ng-submit="login()" name="loginForm" role="form" class="form-horizontal" ng-show="!localUser">
+  <div class="form-group">
+    <label for="username" class="control-label col-sm-2" >Username</label>
+    <div class="col-sm-3">
+      <input type="email" ng-model="email" placeholder="Your Circuit email" name="username" required="required" autofocus="autofocus" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="control-label col-sm-2" >Password</label>
+    <div class="col-sm-3">
+      <input type="password" ng-model="password" placeholder="Password" name="password" required="required" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" ng-show="!localUser" ng-disabled="!email || !password" class="btn btn-default">Log in</button>
+    </div>
+  </div>
+
+</form>
+
+</div><!-- LoginCtrl -->
+
+

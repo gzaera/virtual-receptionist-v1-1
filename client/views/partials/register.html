@@ -1,0 +1,45 @@
+<h1> Please enter the visitors details:</h1>
+<br>
+<div ng-controller="RegisterCtrl"> 
+<form ng-show="!!localUser" ng-submit="send()" name="contactForm" role="form" class="form-horizontal" >
+    <div class="form-group">
+    <label for="visitorname" class="control-label col-sm-2">Name</label>
+    <div class="col-sm-3">
+      <input type="text" ng-model="visitorname" placeholder="Your name" name="visitorname" required="required" autofocus="autofocus" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="companyname" class="control-label col-sm-2">Company</label>
+    <div class="col-sm-3">
+      <input type="text" ng-model="companyname" ng-show="!!localUser" placeholder="Your company" name="companyname" required="required" autofocus="autofocus" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+     <label class="control-label col-sm-2">Who are you visiting?</label>
+    <div class="pad-bottom col-sm-2">Search for your contact person</div>
+  
+      <div><input type="text" ng-model="query" ng-keyup="search(query, $event)" placeholder="Search for a user" class="col-sm-2"/></div>
+      <div class="pad-bottom col-sm-3">
+        <select multiple size="5">
+          <option ng-repeat="user in users" value="user" ng-click="connect2User(user)">{{user.displayName}}</option>
+        </select>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="contact" class="control-label col-sm-2">Contact person:</label>
+    <div class="col-sm-3">
+      <input type="email" ng-model="contactEmail" ng-show="selectedUsers.length" ng-disabled="true" name="contact" required="required" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" ng-disabled="!selectedUsers.length" class="btn btn-default">Send</button>
+    </div>
+  </div>
+
+</form>
+
+
+
+</div> <!-- RegisterCtrl -->
