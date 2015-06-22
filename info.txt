@@ -11,6 +11,17 @@ Angular for JS client UI: https://angularjs.org/
 
 Grunt as JS Task runner: http://gruntjs.com/
 
+Prerequisites:
+==============
+
+* nodejs:
+
+https://nodejs.org/download/
+
+* bower:
+
+npm install -g bower
+
 
 Getting Started:
 ================
