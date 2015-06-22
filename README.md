@@ -7,11 +7,12 @@ Circuit Client SDK Web application example to automate receptionist work when re
 For more information check the Circuit Developer Community: https://www.yourcircuit.com/web/developers
 
 Getting Started:
-
+------------------------
 npm install
 
-How to start the nodejs web server:
 
+How to start the nodejs web server:
+---------------------------------------
 npm start
 
 or
@@ -19,7 +20,7 @@ or
 node server.js
 
 How to start the client:
-
+-------------------------------------
 http on the IP address of your server on port 8000
 
 http://localhost:8000/
