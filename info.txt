@@ -27,5 +27,11 @@ or
 
 node server.js
 
+How to start the client:
+========================
+
+http on the IP address of your server on port 8000
+
+http://localhost:8000/
 
 

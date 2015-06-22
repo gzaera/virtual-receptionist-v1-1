@@ -16,17 +16,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'client')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
-/*
-app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'client', 'views','index.html'));
-});
 
-*/
-
-
-//require('./server/index.js')(app);
-
-//require('./server/routes.js')(app);
 
 app.get('/partials/:filename', routes.partials);
 app.use(routes.index);

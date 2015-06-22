@@ -1,24 +1,6 @@
  
 <div ng-controller="LoginCtrl">
-  <!--
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <ul class="nav nav-tabs">
-            <li><a href="/login">Log in</a></li>
-            <li><a href="" ng-click="logout()" ng-show="!!localUser">Log out</a></li>
-            <div id="userInfo" class="pull-right" ng-show="!!localUser" >Welcome&nbsp;<strong>{{localUser.displayName}}&nbsp;</strong></div>
 
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div data-ui-view class="container"></div>
-    <div id="alertBox" data-ng-show="error" class="alert alert-danger">
-      <button type="button" data-ng-click="error = null;" class="close">&times;</button><strong>Oh no!&nbsp;</strong><span data-ng-bind="error"></span>
-    </div>
-
--->
 <h1 ng-show="!localUser"> Welcome to the Virtual Receptionist</h1>
 <p ng-show="!localUser">  Please enter the Circuit credentials for the corresponding virtual receptionist: </p>
 <br>
