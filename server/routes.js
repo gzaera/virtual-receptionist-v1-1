@@ -1,34 +1,6 @@
 var express = require('express')
     , path =      require('path');
-//var router = express.Router();
-/*
 
-router.get('/', function(req, res, next) {
-
-	res.sendFile(path.resolve(__dirname+'/../client/views/index.html'));
-});
-
-//module.exports = router;
-*/
-///////////////////
-// http://stackoverflow.com/questions/13860899/angular-and-express-routing
-
-/* GET home page. */
-/* 
-module.exports = function(app){
-
-app.get('/', function(req, res){
-	
-  res.sendFile(path.resolve(__dirname+'/../client/views/index.html'));
-});
-
-app.get('/done', function(req, res){
-
-  res.sendFile(path.resolve(__dirname+'/../client/views/done.html'));
-});
-
-}
-*/
 
 exports.partials = function(req, res){
   var filename = req.params.filename;
